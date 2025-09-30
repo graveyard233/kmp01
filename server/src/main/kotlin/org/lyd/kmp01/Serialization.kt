@@ -1,5 +1,6 @@
 package org.lyd.kmp01
 
+import io.ktor.http.HttpStatusCode
 import io.ktor.serialization.kotlinx.json.json
 import io.ktor.server.application.Application
 import io.ktor.server.application.install
@@ -28,6 +29,14 @@ fun Application.configureSerialization() {
                 link = "https://github.com/"
             )
             call.respond(article)
+        }
+        get("/num") {
+            val token = call.request.queryParameters["token"]
+            if (token != null){
+                call.respond(mapOf("token" to token))
+            } else {
+                call.respond(HttpStatusCode.BadRequest, "token is null")
+            }
         }
     }
 }

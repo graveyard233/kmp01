@@ -1,0 +1,20 @@
+// 需要使用http client或者httpRequest插件
+
+GET http://127.0.0.1:9292/tasks
+Accept: application/json
+
+###
+POST http://127.0.0.1:9292/tasks
+Content-Type: application/json
+
+{
+    "name": "cooking",
+    "description": "Cook the dinner",
+    "priority": "High"
+}
+
+###
+POST http://127.0.0.1:9292/tasks/deleteByName
+Content-Type: application/x-www-form-urlencoded
+
+name=cooking
