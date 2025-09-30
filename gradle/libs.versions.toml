@@ -66,6 +66,7 @@ ktor-server-content-negotiation = { module = "io.ktor:ktor-server-content-negoti
 ktor-server-default-headers = { module = "io.ktor:ktor-server-default-headers-jvm" }
 ktor-server-host-common = { module = "io.ktor:ktor-server-host-common-jvm" }
 ktor-server-status-pages = { module = "io.ktor:ktor-server-status-pages-jvm" }
+ktor-server-websockets = { module = "io.ktor:ktor-server-websockets-jvm" }
 
 ktor-server-test-host = { module = "io.ktor:ktor-server-test-host-jvm" }
 

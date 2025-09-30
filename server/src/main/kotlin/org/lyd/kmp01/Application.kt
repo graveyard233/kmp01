@@ -5,8 +5,14 @@ import io.ktor.server.engine.*
 import io.ktor.server.netty.*
 import io.ktor.server.response.*
 import io.ktor.server.routing.*
+import kotlinx.serialization.json.Json
 
 private const val MY_SERVER_PORT = 9292
+
+val json = Json {
+    ignoreUnknownKeys = true
+    isLenient = true
+}
 
 fun main() {
     embeddedServer(
@@ -24,4 +30,5 @@ fun Application.module() {
     configureHTTP()
     configureRouting()
     configureSerialization()
+    configureSockets()
 }

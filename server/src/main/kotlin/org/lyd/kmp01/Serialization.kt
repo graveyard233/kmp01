@@ -12,7 +12,7 @@ import org.lyd.kmp01.bean.Article
 
 fun Application.configureSerialization() {
     install(ContentNegotiation){
-        json()
+        json(json = json)
     }
     routing {
         get("/json"){
